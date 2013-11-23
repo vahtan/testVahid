@@ -1,0 +1,30 @@
+
+<% @page_title = "productAuth | insert" %>
+<div class="productbox">
+  <%= form_for @product,url:"/product/createProduct" do |f| %>
+      <p>
+        <label class="tittle" for="lblpname">نام محصول</label>
+        <%= f.text_field :pname%>
+      </p>
+
+      <p>
+        <label class="tittle" for="lblprice">قیمت محصول</label>
+        <%= f.text_field :price%>
+      </p>
+
+      <button class="productbox-btn" type="submit">درج</button>
+
+  <% end %>
+
+  <% if @product.errors.any? %>
+      <ul class="productbox_Errors">
+        <% for message_error in @product.errors.full_messages %>
+            <li class="error">* <%= message_error %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+</div>
+
+
+

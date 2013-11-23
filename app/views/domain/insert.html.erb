@@ -1,0 +1,32 @@
+
+<% @page_title = "domainAuth | domain" %>
+<div class="domainbox">
+  <%= form_for @domain,url:"/domain/createDomain" do |f| %>
+
+      <p>
+        <label class="tittle" for="lbldname">نام دامنه</label>
+        <%= f.text_field :dname%>
+      </p>
+
+      <p>
+        <label class="tittle" for="lblprice">قیمت دامنه </label>
+        <%= f.text_field :price%>
+      </p>
+
+
+      <button class="domainbox-btn" type="submit">ایجاد دامنه</button>
+
+  <% end %>
+
+  <% if @domain.errors.any? %>
+      <ul class="domain_Errors">
+        <% for message_error in @domain.errors.full_messages %>
+            <li class="error">* <%= message_error %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+</div>
+
+
+

@@ -1,0 +1,15 @@
+<div class="customerbox">
+
+<%= form_tag '/sessions/create' do %>
+    <p>
+      <label class="tittle" for="lblusername"> نام کاربری </label><br />
+      <%= text_field_tag :username %>
+    </p>
+    <p>
+      <label class="tittle" for="lblpassword"> رمز عبور</label><br />
+      <%= password_field_tag :password %>
+    </p>
+      <button class="customerbox-btn" type="submit">ورود</button>
+<% end %>
+
+</div>

@@ -1,0 +1,102 @@
+
+body, .login-submit, .login-submit:before, .login-submit:after {
+  background: url("../img/bg.png") repeat scroll 0 0 #373737;
+}
+
+.productbox {
+  color: #A8A7A8;
+  font-weight: 300;
+  margin: 80px auto;
+  padding-right: 32px;
+  position: relative;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+  width: 400px;
+  float:right;
+}
+.productbox p {
+  margin: 0 0 10px;
+}
+input, button, label {
+  -moz-box-sizing: border-box;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+select
+{
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.16);
+  border: 0 none;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) inset, 0 1px rgba(255, 255, 255, 0.06);
+  color: #FFFFFF;
+  height: 25px;
+  padding: 3px 2px;
+  text-shadow: 1px 1px 1px #000000;
+  width: 110px;
+  float:right;
+
+}
+input[type="text"], input[type="password"] {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.16);
+  border: 0 none;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) inset, 0 1px rgba(255, 255, 255, 0.06);
+  color: #BBBBBB;
+  height: 40px;
+  padding: 0 10px;
+  text-shadow: 1px 1px 1px #000000;
+  width: 300px;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+  color: #FFFFFF;
+  outline: 0 none;
+}
+.tittle {
+  float: right;
+  font-weight: 100;
+  letter-spacing: -1px;
+  line-height: 40px;
+  padding-right: 10px;
+  text-align: right;
+  width: 100px;
+  direction: rtl;
+}
+.productbox-btn
+{
+  background-color: #8C9CBF;
+  background-image: -moz-linear-gradient(center top , #8C9CBF 0%, #546A9E 50%, #36518F 50%, #3D5691 100%);
+  border-color: #172D6E #172D6E #0E1D45;
+  border-image: none;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 0 0 #B1B9CB inset;
+  color: #FFFFFF;
+  font: 13px/1 "helvetica neue",helvetica,arial,sans-serif;
+  padding: 7px 0 8px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #000F4D;
+  width: 150px;
+  margin:10px 98px 0 100px;
+  float:right;
+}
+
+.productbox-btn:hover {
+  background-color: #7F8DAD;
+  background-image: -moz-linear-gradient(center top , #7F8DAD 0%, #4A5E8C 50%, #2F477D 50%, #364C80 100%);
+  cursor: pointer;
+}
+
+
+
+.error
+{
+  color:red;
+}
+
+.productbox_Errors
+{
+  margin: -100px -420px;
+}

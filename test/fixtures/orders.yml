@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customerId: 1
+  productId: 1
+  domainId: 1
+  sitename: MyString
+
+two:
+  customerId: 1
+  productId: 1
+  domainId: 1
+  sitename: MyString

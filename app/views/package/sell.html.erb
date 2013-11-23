@@ -1,0 +1,56 @@
+
+<% @page_title = "packageAuth | sell" %>
+<div class="sell">
+  <%= form_for @package,url:"/package/createOrder" do |f| %>
+      <p>
+        <label class="tittle" for="sell">نام کاربری</label>
+        <%= f.text_field :username%>
+      </p>
+
+      <p>
+        <label class="tittle" for="sell">ایمیل</label>
+        <%= f.text_field :email%>
+      </p>
+
+      <p>
+        <label class="tittle" for="password"> رمز عبور</label>
+        <%= f.password_field :password%>
+      </p>
+
+      <p>
+        <label class="tittle" for="password">  تکرار رمز عبور</label>
+        <%= f.password_field :repassword%>
+      </p>
+
+      <p>
+        <label class="tittle" for="sitename">نام سایت</label>
+        <%= f.text_field :siteName%>
+      </p>
+
+      <p>
+
+        <label class="tittle" for="domain">دامنه</label>
+        <%= select_tag(:domain_id,options_for_select([['.com', 1], ['.ir', 2]])) %>   </br>
+      </p>
+
+      <p>
+        <label class="tittle" style="margin-right:-100px"  for="cms">مدیریت محتوا</label>
+         <%= select_tag(:cms_id,options_for_select([['drupal',1]])) %>
+      </p>
+
+      <button class="sell-btn" type="submit">سفارش</button>
+
+  <% end %>
+
+  <% if @package.errors.any? %>
+      <ul class="sell_Errors">
+        <% for message_error in @package.errors.full_messages %>
+            <li class="error">* <%= message_error %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+</div>
+
+
+

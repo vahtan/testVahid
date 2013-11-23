@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FirstApp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<div id="customer_nav">
+  <% if current_customer %>
+      Logged in as <%= current_customer.username %>.
+      <%= link_to "Log out", '/sessions/destroy',:style=>"color:#3D5691;" %>
+  <% else %>
+      <%= link_to "Sign up", '/customer/insert',:style=>"color:#3D5691;"  %> or
+      <%= link_to "log in", '/customer/login',:style=>"color:#3D5691;" %>
+  <% end %>
+</div>
+
+<% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+<% @page_title = "customerAuth | insert" %>
+<div class="customerbox">
+  <%= form_for @customer,url:"/customer/createCustomer" do |f| %>
+      <p>
+        <label class="tittle" for="lblusername">نام کاربری</label>
+        <%= f.text_field :username%>
+      </p>
+
+      <p>
+        <label class="tittle" for="lblemail">ایمیل</label>
+        <%= f.text_field :email%>
+      </p>
+
+      <p>
+        <label class="tittle" for="lblpassword"> رمز عبور</label>
+        <%= f.password_field :password%>
+      </p>
+
+      <p>
+        <label class="tittle" for="lblrepassword">  تکرار رمز عبور</label>
+        <%= f.password_field :repassword%>
+      </p>
+
+      <button class="customerbox-btn" type="submit">درج</button>
+
+  <% end %>
+
+  <% if @customer.errors.any? %>
+      <ul class="customerbox_Errors">
+        <% for message_error in @customer.errors.full_messages %>
+            <li class="error">* <%= message_error %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+</div>
+
+
+
